@@ -1,4 +1,5 @@
 package QuickSort;
+import java.util.concurrent.ThreadLocalRandom;
 
 public interface SortingStrategy{
 	
@@ -53,11 +54,11 @@ class midPivotStrategy implements SortingStrategy{
 	
 }
 
-class firstPivotStrategy implements SortingStrategy{
+class randomPivotStrategy implements SortingStrategy{
 	
 	@Override
 	public int pivotSelection(int a, int b){
-		int pivot = a;
+		int pivot = ThreadLocalRandom.current().nextInt(a, b + 1);
 		return pivot;
 	};
 	
