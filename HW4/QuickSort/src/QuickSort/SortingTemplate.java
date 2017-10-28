@@ -29,7 +29,7 @@ public abstract class SortingTemplate{
 	
 	public void sort(int[] array) {
 		Sort(array, 0, array.length - 1);
-    }
+    	}
 	
 	protected abstract int pivotSelection(int a, int b);
 	
